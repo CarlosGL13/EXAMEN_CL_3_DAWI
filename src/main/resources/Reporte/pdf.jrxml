@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pdf" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d8c0f772-7d75-4d75-b988-f9d6d19f643e">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[YmRfY3liZXJjbGFzcy50Yl9jYXJyZXJhcyAsMTY2LDY3LDNiYzQxYjkyLTMwMWQtNDdiNy04MTE1
+LTU5YmMwZmRkMDdjNjtiZF9jeWJlcmNsYXNzLnRiX2FsdW1ub3MgLDE1LDE1LGNmMTgzNDNlLTA3
+MWYtNDYxYi04YmEwLTlhOTMwNWU3ZTAzYjs=]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="bd_final"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT bd_cyberclass.tb_alumnos.codalumno AS codigo,
+	bd_cyberclass.tb_alumnos.nombrealumno AS nombre,
+	bd_cyberclass.tb_carreras.nomcarrera as carrera
+FROM bd_cyberclass.tb_alumnos
+	INNER JOIN bd_cyberclass.tb_carreras ON 
+	 bd_cyberclass.tb_alumnos.codcarrera = bd_cyberclass.tb_carreras.codcarrera]]>
+	</queryString>
+	<field name="codigo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="codigo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_alumnos"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_alumnos"/>
+	</field>
+	<field name="carrera" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="carrera"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_carreras"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="185" height="30" backcolor="#FFB829" uuid="03f5ba64-b64d-4408-9ca8-1d15500e0bcb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a50c106-b253-4daa-90d2-1f8f9491fff3"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="185" y="0" width="185" height="30" backcolor="#FFB829" uuid="59497028-61e6-4a59-9381-8a9b324bd893">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14497571-efbc-4034-a5fd-d6cd4d79b479"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="370" y="0" width="185" height="30" backcolor="#FFB829" uuid="13d33e34-5b62-4837-8c38-1b9c68967c52">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="325a90b5-a73b-4866-891f-9213c1b81f47"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[carrera]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="185" height="30" backcolor="#64E8A8" uuid="149ea1fc-4c8d-412c-9c4c-df1796b4e819">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a50c106-b253-4daa-90d2-1f8f9491fff3"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="185" y="0" width="185" height="30" backcolor="#64E8A8" uuid="55defcb0-2fe7-4b43-8819-fa46183445db">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14497571-efbc-4034-a5fd-d6cd4d79b479"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="370" y="0" width="185" height="30" backcolor="#64E8A8" uuid="2b8978b7-75f3-49cf-99e2-3b8bf80c28f7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="325a90b5-a73b-4866-891f-9213c1b81f47"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{carrera}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

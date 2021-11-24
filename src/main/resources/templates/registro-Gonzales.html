@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registro</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Registro de Carrera</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="email">Codigo:</label>
+      <input type="email" class="form-control" id="email" placeholder="Ingrese codigo" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Nombre</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Ingrese nombre" name="pswd">
+    </div>
+     <div class="form-group">
+		   <label>Carrera</label>
+		   <select class="form-control">
+		   <option selected>Seleccione</option>
+			 <option value="1">Pharmalab</option>
+			 <option value="2">Minsa</option>
+			 </select>
+		  </div>
+    <div class="form-group">
+      <label for="pwd">Edad:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Ingrese edad" name="pswd">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Sección:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Ingrese seccion" name="pswd">
+    </div>
+    <button type="submit" class="btn btn-primary">Registro</button>
+    <a href="/pdf" class="btn btn-primary">PDF</a>
+    <a href="/grafico" class="btn btn-primary">Grafico</a>
+  </form>
+</div>
+
+</body>
+</html>
